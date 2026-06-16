@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #ffffff;
+  color: #1b1b1b;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1180px] px-5 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-dark {
+    @apply btn bg-charcoal text-white hover:bg-charcoal-soft hover:-translate-y-0.5 focus-visible:ring-forest;
+  }
+  .btn-green {
+    @apply btn bg-forest text-white hover:bg-forest-deep hover:-translate-y-0.5 focus-visible:ring-lime;
+  }
+  .btn-outline {
+    @apply btn border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white;
+  }
+  .btn-outline-light {
+    @apply btn border-2 border-white/80 text-white hover:bg-white hover:text-forest;
+  }
+  .link-underline {
+    @apply relative font-semibold text-forest after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-forest after:transition-all hover:after:w-full;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em];
+  }
+}
+
+/* Hide scrollbar for horizontal carousels but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.img-fallback {
+  background: linear-gradient(135deg, #024731 0%, #02684a 50%, #6fe39b 100%);
+}
