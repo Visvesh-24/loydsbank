@@ -65,7 +65,7 @@ export default function MortgageCalculator() {
             <p className="rounded-2xl bg-mint-soft p-4 text-xs leading-relaxed text-charcoal/65">
               This calculator gives an illustration based on a repayment mortgage at a constant interest rate.
               Your actual rate, payments and eligibility will depend on your circumstances. Your home may be
-              repossessed if you do not keep up repayments on your mortgage. (Demo figures.)
+              repossessed if you do not keep up repayments on your mortgage. Figures are for illustration only.
             </p>
           </div>
         </div>

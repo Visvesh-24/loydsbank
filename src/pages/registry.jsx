@@ -8,8 +8,11 @@ import LoanCalculator from "./sub/LoanCalculator";
 import SavingsCalculator from "./sub/SavingsCalculator";
 import RatesPage from "./sub/RatesPage";
 import ReportCard from "./sub/ReportCard";
+import LegalPage from "./sub/LegalPage";
+import Sitemap from "./sub/Sitemap";
 
 import { PAGE_DATA, genericPage } from "../data/pages";
+import { LEGAL } from "../data/legal";
 import { SECTIONS } from "../lib/slug";
 
 const HOME = {
@@ -43,6 +46,10 @@ export function renderRoute(section, slug) {
     const Comp = SPECIAL[slug];
     return <Comp />;
   }
+
+  if (slug === "sitemap") return <Sitemap />;
+
+  if (LEGAL[slug]) return <LegalPage data={LEGAL[slug]} />;
 
   const data = PAGE_DATA[slug] || genericPage(safeSection, slug);
   return <InfoPage data={data} />;

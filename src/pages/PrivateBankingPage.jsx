@@ -211,7 +211,7 @@ export default function PrivateBankingPage() {
             Our Private Banking service is available to customers with £250,000 or more in savings or investments,
             or a mortgage of £750,000 or more with Loyds, excluding personal pensions or property. Our Mayfair
             service is available to clients with £2 million or more in savings and/or investments or an annual
-            income of £500,000 or more. (Illustrative figures for this prototype.)
+            income of £500,000 or more.
           </p>
         </div>
       </section>

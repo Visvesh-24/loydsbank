@@ -38,7 +38,7 @@ export default function LoanCalculator() {
             </div>
             <div className="mt-6 rounded-2xl bg-mint-soft p-4 text-xs leading-relaxed text-charcoal/65">
               Rates shown are representative and for illustration only. The rate you're offered depends on your
-              circumstances and may differ. (Demo figures.)
+              circumstances and may differ. Figures are for illustration only.
             </div>
           </div>
 

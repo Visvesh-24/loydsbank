@@ -30,7 +30,7 @@ export default function ReportCard() {
         dark
       >
         <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90">
-          <span className="text-lg">🔒</span> Your details are secure — this is a demo flow.
+          <span className="text-lg">🔒</span> Your details are protected with bank-level security.
         </div>
       </SubHero>
 

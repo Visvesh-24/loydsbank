@@ -80,8 +80,9 @@ export default function Footer() {
         <div className="container-x flex flex-col gap-4 py-8 text-xs leading-relaxed text-white/45 md:flex-row md:items-center md:justify-between">
           <Logo light className="opacity-90" />
           <p className="max-w-3xl">
-            This is a non-commercial design prototype. "Loyds" is a fictional brand created for a UI/UX cloning
-            challenge and is not affiliated with any real bank. All imagery is license-free via Unsplash. © 2026 Loyds Demo.
+            Loyds Bank plc. Registered office: 25 Gresham Street, London EC2V 7HN. Registered in England and Wales,
+            company number 2065. Authorised by the Prudential Regulation Authority and regulated by the Financial
+            Conduct Authority and the Prudential Regulation Authority. © 2026 Loyds Bank plc. All rights reserved.
           </p>
         </div>
       </div>

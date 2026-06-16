@@ -25,7 +25,7 @@ export default function AuthModal({ open, mode = "login", onClose, onSwitch }) {
       <div className="mb-5 flex items-center justify-between">
         <Logo />
         <span className="rounded-full bg-mint-soft px-3 py-1 text-xs font-semibold text-forest">
-          Secure · Demo
+          Secure log-in
         </span>
       </div>
 

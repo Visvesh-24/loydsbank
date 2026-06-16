@@ -5,6 +5,27 @@ import { deslug, SECTION_LABEL } from "../lib/slug";
 // (calculators, rates, fraud) are handled separately in the registry.
 export const PAGE_DATA = {
   /* ——————————————————— PERSONAL ——————————————————— */
+  "bank-on-loyds": {
+    section: "personal",
+    eyebrow: "Bank on Loyds",
+    title: "Over a million people Bank on Loyds",
+    intro:
+      "We're here to help turn your plans into reality — with everyday banking, borrowing, saving and investing built around real life. Heritage you can trust, made for the way you live today.",
+    hero: IMG.appLifestyle,
+    highlights: [
+      ["1M+", "People bank with us"],
+      ["260+", "Years of heritage*"],
+      ["4.8★", "App store rating"],
+    ],
+    features: [
+      { title: "Built around your life", body: "From your first account to your first home, we've got products and people to help at every step — online, in the app or in branch.", img: IMG.currentAccount, bullets: ["Open in minutes", "Award-winning app", "Real human support"] },
+      { title: "Heritage you can trust", body: "A bank with deep roots and modern thinking — combining time-honoured service with the tools you need today.", img: IMG.depositHome, bullets: ["Trusted service", "Secure by design", "Here for the long term"] },
+    ],
+    faqs: [
+      ["What does 'Bank on Loyds' mean?", "It's our promise — dependable, everyday banking you can count on, backed by people who take the time to help."],
+      ["How do I become a customer?", "You can open most accounts online in minutes, or visit a branch. You'll need to be 18 or over and resident in the UK."],
+    ],
+  },
   "current-accounts": {
     section: "personal",
     eyebrow: "Current accounts",
@@ -299,15 +320,15 @@ export function genericPage(section, slug) {
     section,
     eyebrow: SECTION_LABEL[section] || "Loyds",
     title,
-    intro: `Everything you need to know about ${title.toLowerCase()} with Loyds. This is a demonstration page in the prototype — the layout and navigation are fully functional.`,
+    intro: `Everything you need to know about ${title.toLowerCase()} with Loyds — clear products, helpful guidance and support whenever you need it.`,
     hero: IMG.appLifestyle,
     features: [
       { title: `About ${title}`, body: "We're here to help you get the most from your money, with clear products and support whenever you need it.", img: IMG.currentAccount, bullets: ["Simple to use", "Clear pricing", "Support 24/7"] },
       { title: "Made for everyday life", body: "Manage everything in our highly rated app, online or in branch — whichever suits you.", img: IMG.appLifestyle, bullets: ["Mobile & online", "Secure by design", "In-branch help"] },
     ],
     faqs: [
-      ["Is this a real banking product?", "No — Loyds is a fictional brand for a UI/UX design challenge. This page demonstrates working navigation and layout."],
-      ["How do I get in touch?", "Use the Request a callback form below and we'll show you the mock confirmation flow."],
+      ["How do I find out more?", "Use the Request a callback form below and a member of our team will get in touch at a time that suits you."],
+      ["How do I get in touch?", "You can call us, message us securely in the app, or request a callback using the form on this page."],
     ],
   };
 }

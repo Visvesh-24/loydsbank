@@ -96,8 +96,8 @@ export default function RatesPage() {
             </table>
           </div>
           <p className="mt-4 text-xs text-charcoal/55">
-            All rates are illustrative for this prototype and updated for demonstration only. AER = Annual
-            Equivalent Rate. APR = Annual Percentage Rate. SVR = Standard Variable Rate.
+            All rates shown are representative and may change. The rate you're offered depends on your
+            circumstances. AER = Annual Equivalent Rate. APR = Annual Percentage Rate. SVR = Standard Variable Rate.
           </p>
         </div>
       </section>

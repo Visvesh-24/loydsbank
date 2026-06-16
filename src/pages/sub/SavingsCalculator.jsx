@@ -65,7 +65,7 @@ export default function SavingsCalculator() {
             </div>
             <p className="rounded-2xl bg-mint-soft p-4 text-xs leading-relaxed text-charcoal/65">
               Projection assumes interest compounds monthly at a constant rate and deposits are made at month end.
-              Rates can change and tax may apply. (Demo figures, not advice.)
+              Rates can change and tax may apply. Figures are for illustration only and are not financial advice.
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function SavingsCalculator() {
             items={[
               ["What's AER?", "Annual Equivalent Rate shows what you'd earn over a year if interest is compounded and paid."],
               ["Can I withdraw any time?", "It depends on the account — easy-access accounts allow withdrawals; fixed accounts lock funds for a term."],
-              ["Is my money protected?", "Eligible deposits are protected up to the FSCS limit. (Loyds is a demo brand.)"],
+              ["Is my money protected?", "Eligible deposits are protected up to the FSCS limit, per eligible person, per banking licence."],
             ]}
           />
         </div>

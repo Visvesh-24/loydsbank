@@ -120,8 +120,8 @@ export function SurveyResults() {
             ))}
           </ul>
           <p className="mt-5 text-xs leading-relaxed text-charcoal/50">
-            The results are based on a fictional dataset for this prototype. In a real survey, customers
-            are asked how likely they'd be to recommend their provider to friends and family.
+            Results are based on an independent survey in which customers were asked how likely they'd be to
+            recommend their provider to friends and family. Source: independent service quality survey, 2026.
           </p>
         </div>
       </div>

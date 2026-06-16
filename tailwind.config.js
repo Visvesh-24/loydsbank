@@ -28,10 +28,15 @@ export default {
           soft: "#2a2a2a",
         },
         cream: "#f6f4ef",
+        gold: {
+          DEFAULT: "#b08d3c",
+          light: "#d4b765",
+        },
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["'Plus Jakarta Sans'", "Inter", "system-ui", "sans-serif"],
+        antique: ["'Playfair Display'", "Georgia", "ui-serif", "serif"],
       },
       boxShadow: {
         card: "0 10px 40px -12px rgba(2, 71, 49, 0.18)",

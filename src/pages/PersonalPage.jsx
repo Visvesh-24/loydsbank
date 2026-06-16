@@ -37,7 +37,7 @@ export default function PersonalPage() {
             <p className="mt-5 max-w-md text-lg font-medium text-forest-deep/80">
               Over a million people bank with Loyds to help turn plans into reality. We're ready when you are.
             </p>
-            <button className="btn-dark mt-7">More about Bank on Loyds</button>
+            <a href={href("personal", "bank-on-loyds")} className="btn-dark mt-7">More about Bank on Loyds</a>
             <p className="mt-3 text-xs text-forest-deep/60">*see source data, Nov 2025.</p>
           </Reveal>
           <Reveal delay={120} className="hidden justify-center md:flex">
@@ -175,15 +175,15 @@ export default function PersonalPage() {
       <section className="py-16">
         <div className="container-x max-w-3xl">
           <h2 className="font-display text-2xl font-extrabold text-charcoal">
-            Authorised push payment (APP) scams rankings in 2024
+            Authorised push payment (APP) scams reimbursement
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-charcoal/65">
-            In a real publication, banks are required to publish data on how they handle reimbursing customers
-            who fall victim to APP scams. Loyds is a fictional brand created for this design challenge — the
-            figures shown here are illustrative only.
+            We publish data on how we handle reimbursing customers who fall victim to APP scams, in line with
+            industry requirements. We're committed to protecting our customers and to fair, prompt reimbursement
+            where it's due.
           </p>
           <p className="mt-3 text-sm leading-relaxed text-charcoal/65">
-            We're up together for further guidance to help with any questions you may have.
+            If you think you've been targeted by a scam, contact us straight away and we'll help.
           </p>
         </div>
       </section>
