@@ -8,7 +8,7 @@ export const NAV = {
     "Credit cards",
     "Loans",
     "Savings",
-    "Mobile banking app",
+    "Online Banking",
   ],
   business: [
     "Business accounts",
@@ -51,8 +51,8 @@ export const FOOTER = {
     "Pensions",
   ],
   "Help and security": [
-    "Banking online",
-    "Mobile banking app",
+    "Online Banking",
+    "Ways to bank",
     "Service status",
     "Fraud and security",
     "Lost or stolen card",

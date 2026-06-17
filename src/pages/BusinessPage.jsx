@@ -145,16 +145,16 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* App section */}
+      {/* Online Banking for Business */}
       <section className="bg-forest py-16 text-white">
         <div className="container-x grid items-center gap-10 md:grid-cols-2">
           <Reveal>
-            <h2 className="font-display text-3xl font-extrabold sm:text-4xl">Brilliant business banking on the app</h2>
+            <h2 className="font-display text-3xl font-extrabold sm:text-4xl">Powerful Online Banking for Business</h2>
             <ul className="mt-6 space-y-4">
               {[
-                ["📱", "Manage your money", "View accounts, make payments and set up Direct Debits on the go."],
-                ["🧾", "Deposit cheques", "Deposit cheques up to £20,000 and make payments up to £250,000 each day."],
-                ["🔒", "Log in with your fingerprint", "Face ID or your memorable information — secure and fast."],
+                ["💸", "Make payments", "Pay suppliers and staff, set up Direct Debits and make payments up to £250,000 a day."],
+                ["👥", "Manage your team", "Add users, set permissions and give your finance team the access they need."],
+                ["📊", "Stay in control", "View balances, download statements and reconcile transactions in real time."],
               ].map(([i, t, b]) => (
                 <li key={t} className="flex gap-4">
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/10 text-xl">{i}</span>
@@ -165,7 +165,7 @@ export default function BusinessPage() {
                 </li>
               ))}
             </ul>
-            <button className="btn bg-lime text-forest-deep hover:bg-lime-glow mt-7">Download the app</button>
+            <a href={href("business", "ways-to-bank")} className="btn bg-lime text-forest-deep hover:bg-lime-glow mt-7">Explore Online Banking</a>
           </Reveal>
           <Reveal delay={120} className="overflow-hidden rounded-[2rem]">
             <SmartImage src={IMG.bizMeeting} seed={6} alt="Business team" className="h-80 w-full" imgClass="h-full w-full" />

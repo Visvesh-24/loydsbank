@@ -1,11 +1,11 @@
 import { IMG } from "../data/images";
 import SmartImage from "../components/SmartImage";
-import PhoneMockup from "../components/PhoneMockup";
+import HeroBoard from "../components/HeroBoard";
 import { href } from "../lib/slug";
 import { Reveal, SectionHead, ProductCard, IconTile, SurveyResults } from "../components/ui";
 
 const PRODUCTS = [
-  { img: IMG.mortgage, title: "Mortgages", body: "Find a mortgage that suits you. Explore and compare our deals, ready to apply online or in our app.", cta: "Find your deal", to: href("personal", "mortgage-calculator") },
+  { img: IMG.mortgage, title: "Mortgages", body: "Find a mortgage that suits you. Explore and compare our deals, ready to apply online or in branch.", cta: "Find your deal", to: href("personal", "mortgage-calculator") },
   { img: IMG.currentAccount, title: "Current accounts", body: "From everyday banking to accounts with added rewards, find what's right for you.", cta: "View accounts", to: href("personal", "current-accounts") },
   { img: IMG.investments, title: "Investments", body: "Whether you're new to investing or experienced, there are ways to invest with us.", cta: "Ways to invest", to: href("personal", "investments") },
   { img: IMG.loans, title: "Personal loans", body: "For big plans or smaller ones, see how much you could borrow before you apply.", cta: "Explore loans", to: href("personal", "loans") },
@@ -40,27 +40,32 @@ export default function PersonalPage() {
             <a href={href("personal", "bank-on-loyds")} className="btn-dark mt-7">More about Bank on Loyds</a>
             <p className="mt-3 text-xs text-forest-deep/60">*see source data, Nov 2025.</p>
           </Reveal>
-          <Reveal delay={120} className="hidden justify-center md:flex">
-            <PhoneMockup />
+          <Reveal delay={120} className="flex justify-center md:justify-end">
+            <HeroBoard />
           </Reveal>
         </div>
       </section>
 
-      {/* Your bank in your pocket */}
+      {/* Ways to bank with us */}
       <section className="bg-mint-pale py-16">
-        <div className="container-x grid items-center gap-10 rounded-[2rem] bg-white p-8 shadow-card md:grid-cols-2 md:p-12">
-          <Reveal>
-            <span className="eyebrow text-emerald2">The Loyds app</span>
-            <h2 className="mt-2 font-display text-3xl font-extrabold text-charcoal sm:text-4xl">Your bank in your pocket</h2>
-            <p className="mt-4 text-charcoal/65">
-              Join over 10 million customers who already use our highly rated app. Check balances, move money,
-              freeze cards and get spending insights — all in a few taps.
-            </p>
-            <a href={href("personal", "mobile-banking-app")} className="btn-green mt-6">More about our app</a>
-          </Reveal>
-          <Reveal delay={120} className="flex justify-center">
-            <PhoneMockup />
-          </Reveal>
+        <div className="container-x">
+          <SectionHead title="Ways to bank with us" subtitle="Manage your money the way that suits you — securely, whenever you need to." />
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { icon: "💻", title: "Online Banking", body: "Check balances, move money, pay bills and manage your accounts securely from any browser, 24/7.", cta: "Explore Online Banking", to: href("personal", "online-banking") },
+              { icon: "📞", title: "Telephone Banking", body: "Speak to our UK-based team or use automated banking to manage your money over the phone.", cta: "Call us", to: href("personal", "online-banking") },
+              { icon: "🏛️", title: "In branch", body: "Get face-to-face help with your everyday banking and bigger decisions at a branch near you.", cta: "Find a branch", to: href("personal", "find-a-branch") },
+            ].map((w, i) => (
+              <Reveal key={w.title} delay={i * 90}>
+                <div className="flex h-full flex-col rounded-3xl border border-charcoal/10 bg-white p-7 shadow-card transition hover:-translate-y-1.5 hover:shadow-lift">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mint text-2xl">{w.icon}</span>
+                  <h3 className="mt-4 font-display text-xl font-bold text-charcoal">{w.title}</h3>
+                  <p className="mt-2 flex-1 text-sm text-charcoal/65">{w.body}</p>
+                  <a href={w.to} className="link-underline mt-4 text-sm">{w.cta} ›</a>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -127,8 +132,8 @@ export default function PersonalPage() {
             <div className="p-8 md:p-12">
               <h2 className="font-display text-3xl font-extrabold text-charcoal">Your Credit Score</h2>
               <p className="mt-3 text-charcoal/65">
-                Take control of your finances with the power to check your credit score for free. Find your score
-                and your accounts all in one app.
+                Take control of your finances with the power to check your credit score for free. See your score
+                and manage your accounts together in Online Banking.
               </p>
               <button className="btn-dark mt-6">Check your Credit Score</button>
             </div>
@@ -140,30 +145,32 @@ export default function PersonalPage() {
       {/* Banking online */}
       <section className="bg-forest-deep py-16 text-white">
         <div className="container-x">
-          <SectionHead title="Banking online" subtitle="It's simple and additional apps from our website." />
+          <SectionHead title="Banking online" subtitle="Manage your money securely from any browser — quick, simple and available 24/7." />
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="flex flex-col items-start gap-6 rounded-3xl bg-forest p-8 sm:flex-row sm:items-center">
-              <div className="grid h-28 w-28 shrink-0 place-items-center rounded-2xl bg-white p-2">
-                <QR />
-              </div>
-              <div>
-                <h3 className="font-display text-xl font-bold">Mobile banking app</h3>
-                <ul className="mt-3 space-y-1.5 text-sm text-white/80">
-                  <li>✓ Scan to download in seconds</li>
-                  <li>✓ Set up Face and Fingerprint login</li>
-                  <li>✓ Manage your money on the go</li>
-                </ul>
-              </div>
-            </div>
             <div className="rounded-3xl bg-forest p-8">
-              <h3 className="font-display text-xl font-bold">Online banking</h3>
-              <p className="mt-3 text-sm text-white/80">
-                Log in to view or manage your accounts on our website. It's quick, secure and available 24/7.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-3">
+              <h3 className="font-display text-xl font-bold">Online Banking</h3>
+              <ul className="mt-4 space-y-2 text-sm text-white/85">
+                <li>✓ View balances and statements</li>
+                <li>✓ Pay bills and move money</li>
+                <li>✓ Manage Direct Debits and standing orders</li>
+                <li>✓ Available 24/7, securely</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-3">
                 <button className="btn bg-lime text-forest-deep hover:bg-lime-glow">Log in</button>
                 <button className="btn-outline-light">Register</button>
               </div>
+            </div>
+            <div className="rounded-3xl bg-forest p-8">
+              <h3 className="font-display text-xl font-bold">Banking you can trust</h3>
+              <p className="mt-3 text-sm text-white/85">
+                Your money is safeguarded by secure log-in, round-the-clock fraud monitoring and our commitment
+                to keeping your details private.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-white/85">
+                <li>🛡️ 24/7 fraud monitoring</li>
+                <li>🔒 Secure, encrypted log-in</li>
+                <li>🏦 FSCS-protected deposits up to £85,000</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -188,17 +195,5 @@ export default function PersonalPage() {
         </div>
       </section>
     </>
-  );
-}
-
-function QR() {
-  // simple decorative QR-style grid
-  const cells = Array.from({ length: 49 }, (_, i) => (i * 7 + 3) % 5 !== 0);
-  return (
-    <div className="grid h-full w-full grid-cols-7 gap-[2px]">
-      {cells.map((on, i) => (
-        <span key={i} className={on ? "bg-forest-deep" : "bg-transparent"} />
-      ))}
-    </div>
   );
 }

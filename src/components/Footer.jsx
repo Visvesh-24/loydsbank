@@ -11,8 +11,8 @@ const FOOTER_ROUTES = {
   "Credit cards": ["personal", "credit-cards"],
   Mortgages: ["personal", "mortgage-calculator"],
   Savings: ["personal", "savings"],
-  "Banking online": ["personal", "mobile-banking-app"],
-  "Mobile banking app": ["personal", "mobile-banking-app"],
+  "Online Banking": ["personal", "online-banking"],
+  "Ways to bank": ["business", "ways-to-bank"],
   "About Loyds": ["personal", "about-loyds"],
 };
 
@@ -24,15 +24,15 @@ const linkHref = (label) => {
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-white/80">
-      {/* App banner strip */}
+      {/* Open an account banner strip */}
       <div className="bg-forest">
         <div className="container-x flex flex-col items-start gap-5 py-10 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h3 className="font-display text-2xl font-extrabold text-white">Banking is better in the app</h3>
-            <p className="mt-1 text-sm text-white/80">It's simple, secure and made for everyday life.</p>
+            <h3 className="font-display text-2xl font-extrabold text-white">Ready to switch? Open an account in minutes</h3>
+            <p className="mt-1 text-sm text-white/80">Everyday banking that's simple, secure and made for life.</p>
           </div>
-          <a href={href("personal", "mobile-banking-app")} className="btn bg-lime text-forest-deep hover:bg-lime-glow">
-            More about our app
+          <a href={href("personal", "current-accounts")} className="btn bg-lime text-forest-deep hover:bg-lime-glow">
+            Open an account
           </a>
         </div>
       </div>

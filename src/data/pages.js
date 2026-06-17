@@ -15,10 +15,10 @@ export const PAGE_DATA = {
     highlights: [
       ["1M+", "People bank with us"],
       ["260+", "Years of heritage*"],
-      ["4.8★", "App store rating"],
+      ["£85k", "FSCS protected"],
     ],
     features: [
-      { title: "Built around your life", body: "From your first account to your first home, we've got products and people to help at every step — online, in the app or in branch.", img: IMG.currentAccount, bullets: ["Open in minutes", "Award-winning app", "Real human support"] },
+      { title: "Built around your life", body: "From your first account to your first home, we've got products and people to help at every step — online or in branch.", img: IMG.currentAccount, bullets: ["Open in minutes", "Branch network", "Real human support"] },
       { title: "Heritage you can trust", body: "A bank with deep roots and modern thinking — combining time-honoured service with the tools you need today.", img: IMG.depositHome, bullets: ["Trusted service", "Secure by design", "Here for the long term"] },
     ],
     faqs: [
@@ -31,12 +31,12 @@ export const PAGE_DATA = {
     eyebrow: "Current accounts",
     title: "A current account that fits your life",
     intro:
-      "From everyday banking to accounts with added rewards and travel perks, find the account that's right for you — open in minutes, all in the app.",
+      "From everyday banking to accounts with added rewards and travel perks, find the account that's right for you — open online in minutes or in branch.",
     hero: IMG.currentAccount,
     highlights: [
       ["£175", "Switch offer*"],
       ["0", "Monthly fee on Classic"],
-      ["24/7", "Mobile banking"],
+      ["24/7", "Online Banking"],
     ],
     cards: [
       { tag: "Most popular", title: "Classic Account", body: "Everyday banking with no monthly fee, contactless debit card and Apple/Google Pay.", cta: "Apply now", img: IMG.currentAccount },
@@ -65,21 +65,25 @@ export const PAGE_DATA = {
       ["How quickly can I use my card?", "Once approved you can add your card to your digital wallet and start spending right away."],
     ],
   },
-  "mobile-banking-app": {
+  "online-banking": {
     section: "personal",
-    eyebrow: "Mobile banking app",
-    title: "Your bank, in your pocket",
+    eyebrow: "Online Banking",
+    title: "Bank online, securely, 24/7",
     intro:
-      "Join over 10 million customers who bank with our highly rated app. Move money, freeze cards, set savings goals and get real-time spending insights.",
+      "Manage your money from any browser. Check balances, pay bills, move money and stay on top of your accounts — quick, simple and secure, whenever it suits you.",
     hero: IMG.appLifestyle,
-    showPhone: true,
+    highlights: [
+      ["24/7", "Always available"],
+      ["7 days", "To switch accounts"],
+      ["£85k", "FSCS protected"],
+    ],
     features: [
-      { title: "Move money in seconds", body: "Send payments, manage Direct Debits and split bills with friends — all secured by Face or Fingerprint ID.", img: IMG.appLifestyle, bullets: ["Instant payments", "Standing orders", "Pay a contact"] },
-      { title: "Stay in control", body: "Freeze and unfreeze your card instantly, set spending limits and get a notification for every transaction.", img: IMG.creditScore, bullets: ["Freeze your card", "Spending insights", "Card controls"] },
+      { title: "Move money in seconds", body: "Send payments, set up standing orders and manage Direct Debits — all from a secure log-in on our website.", img: IMG.appLifestyle, bullets: ["Instant payments", "Standing orders", "Pay a contact"] },
+      { title: "Stay in control", body: "View statements, track your spending and keep on top of every account in one secure place.", img: IMG.creditScore, bullets: ["Statements & exports", "Spending overview", "Manage payees"] },
     ],
     faqs: [
-      ["Is the app secure?", "Yes — it uses biometric login, end-to-end encryption and our 24/7 fraud monitoring."],
-      ["Which devices are supported?", "The app is available for recent iOS and Android devices."],
+      ["Is Online Banking secure?", "Yes — it uses secure, encrypted log-in and our 24/7 fraud monitoring to keep your money safe."],
+      ["How do I register?", "Choose Register at the top of the site and follow the steps — you'll need your account details to hand."],
     ],
   },
 
@@ -152,7 +156,7 @@ export const PAGE_DATA = {
       { title: "Talk to a human", body: "Our UK-based business team is on hand by phone and secure message during business hours.", img: IMG.bizMeeting, bullets: ["Phone support", "Secure messaging", "Relationship managers"] },
     ],
     faqs: [
-      ["How do I check service status?", "Live status for online and mobile banking is shown on your dashboard."],
+      ["How do I check service status?", "Live status for Online Banking is shown on your dashboard."],
       ["Can I add team members?", "Yes — add users and set permissions from your account settings."],
     ],
   },
@@ -161,16 +165,16 @@ export const PAGE_DATA = {
     eyebrow: "Ways to bank",
     title: "Bank the way that suits your business",
     intro:
-      "App, online, phone or branch — manage your money however works best for you, with the same security throughout.",
+      "Online, phone or branch — manage your money however works best for you, with the same security throughout.",
     hero: IMG.bizMeeting,
     cards: [
-      { tag: "Mobile", title: "Business app", body: "Deposit cheques, make payments up to £250,000 a day and log in with your fingerprint.", cta: "Get the app", img: IMG.bizMeeting },
-      { tag: "Online", title: "Online for Business", body: "A full dashboard for payments, payroll and cash management.", cta: "Log in", img: IMG.bizProfessionals },
-      { tag: "In person", title: "Branch & phone", body: "Talk to us in branch or over the phone whenever you need a hand.", cta: "Find a branch", img: IMG.branch },
+      { tag: "Online", title: "Online for Business", body: "A full dashboard for payments, payroll, cash management and multiple users.", cta: "Log in", img: IMG.bizProfessionals },
+      { tag: "Phone", title: "Telephone Banking", body: "Speak to our UK-based business team or use automated banking to manage your money by phone.", cta: "Call us", img: IMG.bizMeeting },
+      { tag: "In person", title: "Branch banking", body: "Talk to us in branch whenever you need face-to-face help with your business.", cta: "Find a branch", img: IMG.branch },
     ],
     faqs: [
-      ["Is the app free?", "Yes, the business app is free to download and use with your account."],
-      ["Can I bank in branch?", "Yes — find your nearest branch and opening hours in the app."],
+      ["Is Online Banking free?", "Yes, Online Banking for Business is free to use with your account."],
+      ["Can I bank in branch?", "Yes — find your nearest branch and its opening hours using our branch finder."],
     ],
   },
   insights: {
@@ -324,11 +328,11 @@ export function genericPage(section, slug) {
     hero: IMG.appLifestyle,
     features: [
       { title: `About ${title}`, body: "We're here to help you get the most from your money, with clear products and support whenever you need it.", img: IMG.currentAccount, bullets: ["Simple to use", "Clear pricing", "Support 24/7"] },
-      { title: "Made for everyday life", body: "Manage everything in our highly rated app, online or in branch — whichever suits you.", img: IMG.appLifestyle, bullets: ["Mobile & online", "Secure by design", "In-branch help"] },
+      { title: "Made for everyday life", body: "Manage everything through secure Online Banking or in branch — whichever suits you.", img: IMG.appLifestyle, bullets: ["Online Banking", "Secure by design", "In-branch help"] },
     ],
     faqs: [
       ["How do I find out more?", "Use the Request a callback form below and a member of our team will get in touch at a time that suits you."],
-      ["How do I get in touch?", "You can call us, message us securely in the app, or request a callback using the form on this page."],
+      ["How do I get in touch?", "You can call us, message us securely in Online Banking, or request a callback using the form on this page."],
     ],
   };
 }

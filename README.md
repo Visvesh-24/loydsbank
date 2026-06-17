@@ -56,7 +56,7 @@ src/
 │   ├── Logo.jsx             # typography-driven "Loyds" wordmark (coin-ring "o")
 │   ├── Modal.jsx            # reusable accessible modal
 │   ├── AuthModal.jsx        # login / register flow
-│   ├── PhoneMockup.jsx      # pure-CSS banking app phone
+│   ├── HeroBoard.jsx        # "today's rates" banking-terms hero panel
 │   ├── SmartImage.jsx       # image with graceful gradient fallback
 │   └── ui.jsx               # Reveal, SectionHead, ProductCard, IconTile,
 │                            #   SurveyResults, CallbackForm

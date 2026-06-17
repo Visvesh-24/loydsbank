@@ -198,7 +198,7 @@ export const LEGAL = {
       },
       {
         h: "Features to help you",
-        p: ["Our website and app include:"],
+        p: ["Our website and Online Banking include:"],
         list: [
           "Clear, resizable text and strong colour contrast.",
           "Full keyboard navigation and screen-reader support.",

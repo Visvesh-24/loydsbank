@@ -1,10 +1,9 @@
 import SmartImage from "../../components/SmartImage";
-import PhoneMockup from "../../components/PhoneMockup";
 import { SubHero, Faq } from "../../components/SubLayout";
 import { Reveal, SectionHead, CallbackForm } from "../../components/ui";
 
 export default function InfoPage({ data }) {
-  const { section, eyebrow, title, intro, hero, dark, highlights, cards, features, faqs, showPhone } = data;
+  const { section, eyebrow, title, intro, hero, dark, highlights, cards, features, faqs } = data;
 
   return (
     <>
@@ -90,20 +89,6 @@ export default function InfoPage({ data }) {
                 </div>
               </Reveal>
             ))}
-          </div>
-        </section>
-      )}
-
-      {/* Phone showcase */}
-      {showPhone && (
-        <section className="bg-forest py-16 text-white">
-          <div className="container-x flex flex-col items-center gap-10 md:flex-row md:justify-between">
-            <div className="max-w-md">
-              <h2 className="font-display text-3xl font-extrabold">Designed for your day</h2>
-              <p className="mt-3 text-white/80">Everything you need, a tap away — balances, payments, savings goals and instant card controls.</p>
-              <a href="#contact" className="btn bg-lime text-forest-deep hover:bg-lime-glow mt-6">Get the app</a>
-            </div>
-            <PhoneMockup />
           </div>
         </section>
       )}
