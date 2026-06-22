@@ -33,10 +33,10 @@ export const NAV = {
 export const SURVEY = [
   { name: "monzo", score: 82 },
   { name: "STARLING", score: 77 },
-  { name: "nationwide", score: 76 },
+  { name: "nationwide", score: 75 },
   { name: "first direct", score: 74 },
   { name: "CHASE", score: 72 },
-  { name: "Loyds", score: 64, self: true },
+  { name: "LOYDS BANK", score: 64, self: true },
 ];
 
 export const FOOTER = {

@@ -1,60 +1,49 @@
 /**
- * Loyds — an antique, heritage-style wordmark.
- * A vintage coin/seal medallion (beaded "coin edge", twin rings, serif "L"
- * monogram and small heraldic stars) paired with an elegant Playfair Display
- * wordmark for an old-world banking feel.
+ * Loyds — a prancing black-horse emblem paired with a bold "LOYDS" wordmark.
+ * Recreated as a scalable SVG. Supports a light variant for dark/green headers.
+ *
+ * (For a pixel-exact match to the supplied artwork, drop the PNG at
+ *  public/loyds-logo.png and swap the <Horse/> for <img src="/loyds-logo.png" />.)
  */
 export default function Logo({ light = false, className = "" }) {
-  const ink = light ? "#ffffff" : "#024731"; // primary
-  const gold = light ? "#d4b765" : "#b08d3c"; // antique gold accent
+  const horse = light ? "#ffffff" : "#0a3d2b";
+  const ink = light ? "#ffffff" : "#111111";
 
   return (
     <span className={`inline-flex select-none items-center gap-2.5 ${className}`}>
-      <Medallion ink={ink} gold={gold} />
+      <Horse fill={horse} />
       <span
-        className="font-antique text-[27px] font-bold leading-none tracking-[0.02em]"
+        className="font-display text-[26px] font-extrabold leading-none tracking-[-0.01em]"
         style={{ color: ink }}
       >
-        Lo<span style={{ color: gold }}>y</span>ds
+        LOYDS
       </span>
     </span>
   );
 }
 
-function Medallion({ ink, gold }) {
+function Horse({ fill }) {
+  // Heraldic horse head facing left (single silhouette path; eye as negative space).
   return (
-    <svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true" className="shrink-0">
-      {/* coin edge — beaded ring */}
-      <circle cx="32" cy="32" r="30" fill="none" stroke={gold} strokeWidth="2" strokeDasharray="1.6 2.6" strokeLinecap="round" />
-      {/* twin rings */}
-      <circle cx="32" cy="32" r="25.5" fill="none" stroke={ink} strokeWidth="2.2" />
-      <circle cx="32" cy="32" r="22" fill="none" stroke={gold} strokeWidth="1" />
-      {/* serif L monogram */}
-      <text
-        x="32"
-        y="43"
-        textAnchor="middle"
-        fontFamily="'Playfair Display', Georgia, serif"
-        fontWeight="700"
-        fontSize="34"
-        fill={ink}
-      >
-        L
-      </text>
-      {/* heraldic stars top & bottom */}
-      <Star cx={32} cy={11.5} fill={gold} />
-      <Star cx={32} cy={52.5} fill={gold} />
+    <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true" className="shrink-0">
+      {/* horse head & neck (heraldic), facing left; eye as negative space */}
+      <path
+        fill={fill}
+        fillRule="evenodd"
+        d="M16 66
+          C 10 62 12 53 18 49
+          L 33 38
+          C 34 31 33 24 37 18
+          L 41 9 L45 21
+          L 50 11 L53 23
+          C 58 33 62 47 62 62
+          C 62 74 60 84 59 90
+          L 47 90
+          C 47 74 44 63 37 57
+          C 31 63 25 67 18 67
+          Z
+          M41 44 a3 3 0 1 0 0.01 0 Z"
+      />
     </svg>
-  );
-}
-
-function Star({ cx, cy, fill }) {
-  // tiny 4-point diamond star
-  const r = 2.4;
-  return (
-    <path
-      d={`M${cx} ${cy - r} L${cx + r * 0.5} ${cy} L${cx} ${cy + r} L${cx - r * 0.5} ${cy} Z`}
-      fill={fill}
-    />
   );
 }

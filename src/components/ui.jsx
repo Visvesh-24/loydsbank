@@ -95,34 +95,54 @@ export function SurveyResults() {
     <section className="bg-cream py-16">
       <div className="container-x">
         <SectionHead title="Independent service quality survey results" />
-        <div className="mx-auto max-w-3xl rounded-3xl border border-charcoal/10 bg-white p-6 shadow-soft sm:p-8">
-          <div className="mb-4 flex items-center justify-between text-xs font-bold uppercase tracking-wide text-charcoal/50">
-            <span>Ranking</span>
-            <span>Customers who'd recommend</span>
+        <div className="grid gap-10 rounded-3xl border border-charcoal/10 bg-white p-6 shadow-soft sm:p-9 lg:grid-cols-[1fr_1.3fr]">
+          {/* Left — context */}
+          <div>
+            <h3 className="font-display text-xl font-bold text-charcoal">Personal current accounts</h3>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-charcoal/45">Published February 2026</p>
+            <p className="mt-4 text-sm leading-relaxed text-charcoal/65">
+              As part of a regulatory requirement, an independent survey was conducted to ask approximately 1,000
+              customers of each of the 17 largest personal current account providers if they would recommend
+              their provider to friends and family.
+            </p>
+            <h4 className="mt-5 font-bold text-charcoal">Overall service quality</h4>
+            <p className="mt-2 text-sm leading-relaxed text-charcoal/65">
+              We asked customers how likely they would be to recommend their personal current account provider to
+              friends and family.
+            </p>
+            <a href="#" onClick={(e) => e.preventDefault()} className="link-underline mt-4 inline-block text-sm">
+              View the full set of results ›
+            </a>
           </div>
-          <ul className="space-y-3">
-            {SURVEY.map((b, i) => (
-              <li key={b.name} className="flex items-center gap-3">
-                <span className="w-5 text-sm font-bold text-charcoal/50">{i + 1}</span>
-                <span
-                  className={`w-28 shrink-0 text-sm font-bold ${b.self ? "text-forest" : "text-charcoal"}`}
-                >
-                  {b.name}
-                </span>
-                <div className="h-5 flex-1 overflow-hidden rounded-full bg-mint-soft">
-                  <div
-                    className={`h-full rounded-full ${b.self ? "bg-forest" : "bg-emerald2"}`}
-                    style={{ width: `${b.score}%` }}
-                  />
-                </div>
-                <span className="w-12 text-right text-sm font-bold text-charcoal">{b.score}%</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 text-xs leading-relaxed text-charcoal/50">
-            Results are based on an independent survey in which customers were asked how likely they'd be to
-            recommend their provider to friends and family. Source: independent service quality survey, 2026.
-          </p>
+
+          {/* Right — ranking */}
+          <div>
+            <div className="mb-4 flex items-center justify-between text-xs font-bold uppercase tracking-wide text-charcoal/50">
+              <span>Ranking</span>
+              <span>Customers who'd recommend</span>
+            </div>
+            <ul className="space-y-3">
+              {SURVEY.map((b, i) => (
+                <li key={b.name} className="flex items-center gap-3">
+                  <span className="w-5 text-sm font-bold text-charcoal/50">{i + 1}</span>
+                  <span className={`w-28 shrink-0 truncate text-sm font-bold ${b.self ? "text-forest" : "text-charcoal"}`}>
+                    {b.name}
+                  </span>
+                  <div className="h-5 flex-1 overflow-hidden rounded-full bg-mint-soft">
+                    <div
+                      className={`h-full rounded-full ${b.self ? "bg-forest" : "bg-emerald2"}`}
+                      style={{ width: `${b.score}%` }}
+                    />
+                  </div>
+                  <span className="w-12 text-right text-sm font-bold text-charcoal">{b.score}%</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-xs leading-relaxed text-charcoal/50">
+              These statements are required by the Financial Conduct Authority. Information about Loyds'
+              performance is also displayed in branch and online.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -34,9 +34,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["'Plus Jakarta Sans'", "Inter", "system-ui", "sans-serif"],
-        antique: ["'Playfair Display'", "Georgia", "ui-serif", "serif"],
+        sans: ["Mulish", "system-ui", "sans-serif"],
+        display: ["Mulish", "system-ui", "sans-serif"],
+        antique: ["Mulish", "system-ui", "sans-serif"],
       },
       boxShadow: {
         card: "0 10px 40px -12px rgba(2, 71, 49, 0.18)",
